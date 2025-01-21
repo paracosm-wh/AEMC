@@ -42,6 +42,12 @@ code are required.
 - Eigen
 
 ### c. Install
+- Install ROS2 (Refer to https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Development-Setup.html)
+
+- Clone this project into the src directory of your ROS2 workspace.
+```sh
+  git clone https://github.com/paracosm-wh/AEMC.git
+```
 
 ```sh
   colcon build
@@ -49,11 +55,15 @@ code are required.
 
 ### d. Use
 
-```shell
+```sh
+source install/setup.bash
+```
+
+```sh
 ros2 run aemc_client aemc_client_node
 ```
 
-```shell
+```sh
 ros2 topic echo /aemc_client_node/aemc_pose
 ```
 
@@ -69,12 +79,12 @@ float64 confidence
 
 ## 4. Comparison with Data-driven methods
 
-### 1. vs. [SOMA](https://github.com/nghorbani/soma)
+### a. vs. [SOMA](https://github.com/nghorbani/soma)
 
 - Refer
   to [Run SOMA On MoCap Point Cloud Data](https://github.com/nghorbani/soma/tree/main/src/tutorials/run_soma_on_soma_dataset.ipynb)
 
-### 2. vs. MoCap-solver
+### b. vs. MoCap-solver
 
 - Refer to https://github.com/NetEase-GameAI/MoCap-Solver  
   Modify SyntheticDataGeneration/generate_test_data.py
